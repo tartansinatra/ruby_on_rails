@@ -1,0 +1,9 @@
+<h1>Chickens</h1>
+
+<% @chickens.each do |chicken| %>
+  <h4><%= chicken.name %></h4>
+  <!-- <p><a href="/chickens/<%= chicken.id %>">Show chicken</a></p> -->
+
+  <!-- This is a dupliate of the above method -->
+  <%= link_to 'Show Chicken', chicken_path(chicken.id) %>
+<% end %>

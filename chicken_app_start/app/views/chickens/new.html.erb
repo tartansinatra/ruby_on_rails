@@ -1,0 +1,41 @@
+<%= form_for @chicken do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :colour, 'Feather Colour' %>
+  <%= f.color_field :colour %>
+  <br>
+  <br>
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+  <br>
+  <br>
+  <%= f.label :favourite %>
+  <%= f.check_box :favourite %>
+  <br>
+  <br>
+  <%= f.label :birthday %>
+  <%= f.date_field :birthday %>
+  <br>
+  <br>
+  <%= f.label :weight %> 
+  <%= f.number_field :weight, min: 1000, max: 2000, step: 5 %>
+  <br>
+  <br>
+  <%= f.label :rating %>
+  <%= f.range_field :rating, min: 1, max: 10 %>
+  <br>
+  <br>
+  <%= f.label :imageurl %>
+  <%= f.text_field :imageurl %>
+  <br>
+  <br>
+  <%= f.label :gender %>
+  <%= f.select :gender, "<option>Male</option><option>Female</option>".html_safe %>
+  <br>
+  <br>
+  <%= f.submit "create chicken" %>
+
+
+<% end %>

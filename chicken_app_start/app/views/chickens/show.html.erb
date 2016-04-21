@@ -1,0 +1,41 @@
+<% if @error %>
+  <p><%= @error %></p>
+<% else %>
+
+  <h1><%= @chicken.name %></h1>
+
+  <p>Last updated <%= time_ago_in_words(@chicken.updated_at) %></p>
+
+  <b>Feather color:</b>
+  <div class="color" style="background-color:<%= @chicken.colour %>"></div>
+
+  <b>Is this our favourite?:</b>
+  <p><%= @chicken.favourite %></p>
+
+  <b>Chicken was born:</b>
+  <p><%= time_ago_in_words(@chicken.birthday) %></p>
+
+  <b>Chicken weight:</b>
+  <p><%= number_to_human(@chicken.weight) %></p>
+
+  <b>Rating:</b>
+  <p><%= @chicken.rating %> out of 10</p>
+
+  <b>Pic of this chicken</b>
+  <%= image_tag(@chicken.imageurl) %>
+  <!-- This is an alternate to the line above. -->
+  <p> <img src="<%= @chicken.imageurl %>" /></p>
+
+  <b>This chicken is:</b>
+  <p><%= @chicken.gender %></p>
+
+<% end %>
+
+
+
+
+
+
+
+
+

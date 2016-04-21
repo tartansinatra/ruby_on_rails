@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ValApp</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+  <li><%= link_to 'New Chicken', new_chicken_path %></li>
+  <li><%= link_to 'All chickens', chickens_path %></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>
